@@ -33,8 +33,9 @@ var dnaList = [];
 //KJ attrs
 const name = "Sigh Ducks ";
 const gen = "Gen 0 ";
-const symbol = ""; //Required field for metaplex
-const seller_fee_basis_points = 700;
+const symbol = "SighDucks"; //Required field for metaplex
+const seller_fee_basis_points = 1000;
+const isMutable = 1;
 var collection = {name: "Sigh Ducks Gen 0",
 family: "Sigh Ducks"};
 var properties = {files: [{uri: "image.png", type: "image/png"}], 
@@ -49,8 +50,6 @@ creators: [
     share: 50
   }
 ]};
-
-
 
 const buildSetup = () => {
   if (fs.existsSync(buildDir)) {
@@ -129,7 +128,6 @@ const drawBackground = () => {
 };
 
 const addMetadata = (_dna, _edition) => {
-  let dateTime = Date.now();
   let tempMetadata = {
     dna: sha1(_dna.join("")),
     name: name + gen + `#${_edition}`,
@@ -141,7 +139,8 @@ const addMetadata = (_dna, _edition) => {
     ...extraMetadata,
     attributes: attributesList,
     collection: collection,
-    properties: properties
+    properties: properties,
+    isMutable: isMutable
   };
   metadataList.push(tempMetadata);
   attributesList = [];
