@@ -42,12 +42,20 @@ var properties = {files: [{uri: "image.png", type: "image/png"}],
 category: "image",
 creators: [
   {
-    address: "ASszz4eQRNfw2euu2bG7C93hoENvG1AiSapvpPenn9Ax",
-    share: 50
+    address: "TODO1",
+    share: 23
   },
   {
-    address: "ChStNqrcv4ho2K6cRUwoVV79UDVUSpqefLPKNKokFdvr",
-    share: 50
+    address: "TODO2",
+    share: 24
+  },
+  {
+    address: "TODO3",
+    share: 26
+  },
+  {
+    address: "TODO4",
+    share: 27
   }
 ]};
 
