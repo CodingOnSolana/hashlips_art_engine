@@ -32,30 +32,30 @@ var dnaList = [];
 
 //KJ attrs
 const name = "Sigh Ducks ";
-const gen = "Gen 0 ";
+const gen = "PX777 ";
 const symbol = "SighDucks"; //Required field for metaplex
-const seller_fee_basis_points = 1000;
+const seller_fee_basis_points = 500;
 const isMutable = 1;
-var collection = {name: "Sigh Ducks Gen 0",
+var collection = {name: "Sigh Ducks PX777",
 family: "Sigh Ducks"};
 var properties = {files: [{uri: "image.png", type: "image/png"}], 
 category: "image",
 creators: [
   {
     address: "TODO1",
-    share: 23
+    share: 5
   },
   {
     address: "TODO2",
-    share: 24
+    share: 5
   },
   {
     address: "TODO3",
-    share: 26
+    share: 10
   },
   {
     address: "TODO4",
-    share: 27
+    share: 80
   }
 ]};
 
