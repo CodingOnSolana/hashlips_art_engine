@@ -42,6 +42,29 @@ layerConfigurations.forEach((config) => {
     if (!rarityData.includes(layer.name)) {
       // add elements for each layer to chart
       rarityData[layerName] = elementsForLayer;
+      switch (layerName) {
+        case 'Head':
+        case 'Beak':
+        case 'Body':
+          rarityData[layerName].rank = 3;
+          break;
+        case 'Feet':
+        case 'Eyes':
+        case 'Background':
+          rarityData[layerName].rank = 3;
+          break;
+        case 'Clothes':
+          rarityData[layerName].rank = 2;
+          break;
+        case 'Hands':
+          rarityData[layerName].rank = 1.5;
+          break;
+        case 'Hat':
+          rarityData[layerName].rank = 1;
+          break;
+        default:
+          console.log(`Sorry, we are out of ${expr}.`);
+      }
     }
   });
 });
@@ -67,18 +90,24 @@ data.forEach((element) => {
 for (var layer in rarityData) {
   for (var attribute in rarityData[layer]) {
     // convert to percentage
+    if(attribute == 'rank')
+      continue;
     rarityData[layer][attribute].occurrencePerc =
       (rarityData[layer][attribute].occurrence / editionSize) * 100;
 
     // show two decimal places in percent
     rarityData[layer][attribute].occurrencePerc =
       rarityData[layer][attribute].occurrencePerc.toFixed(4) + "% out of 100%";
+
+      rarityData[layer][attribute].rankScore =
+      (rarityData[layer][attribute].occurrence / editionSize) * rarityData[layer].rank;
   }
 }
 
 // print out rarity data
 for (var layer in rarityData) {
   console.log(`Trait type: ${layer}`);
+  
   for (var trait in rarityData[layer]) {
     console.log(rarityData[layer][trait]);
   }
@@ -91,23 +120,41 @@ data.forEach((element) => {
   let attributes = element.attributes;
   element.rank = 1;
   attributes.forEach((attribute) => {
-    let traitType = attribute.trait_type;
+    var traitType = attribute.trait_type;
     let value = attribute.value;
 
     let rarityDataTraits = rarityData[traitType];
     rarityDataTraits.forEach((rarityDataTrait) => {
       if (rarityDataTrait.trait == value) {
         // keep track of occurrences
-        element.rank *= rarityDataTrait.occurrence / editionSize;
+        element.rank += rarityDataTrait.rankScore;
       }
     });
   });
 });
 
-let lowestToHighest = data.sort(function(a, b) {
-  return a.rank - b.rank;
-});
-let test = lowestToHighest[0];
-for(let i = 0; i < editionSize; i++) {
-  console.log(lowestToHighest[i].name);
+data.sort(function(a, b) {
+  if(a.rank < b.rank){
+    return -1;
+// a should come after b in the sorted order
+}else if(a.rank > b.rank){
+    return 1;
+// a and b are the same
+}else{
+    return 0;
 }
+});
+
+data.rank
+
+for(let i = 0; i < editionSize; i++) {
+  console.log(data[i].name);
+}
+
+console.log();
+
+data.forEach((element) => {
+  if(element.rank < 5) {
+    console.log(element.name)
+  }
+});

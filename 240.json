@@ -1,0 +1,79 @@
+{
+  "dna": "529d581d75c7dc11cf9a678fe22356119417772b",
+  "name": "Sigh Ducks PX777 #240",
+  "description": "If it looks like a duck and sighs like a duck, that's a real duck! #sighducks",
+  "seller_fee_basis_points": 500,
+  "image": "image.png",
+  "edition": 240,
+  "symbol": "SighDucks",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "pink"
+    },
+    {
+      "trait_type": "Body",
+      "value": "purple"
+    },
+    {
+      "trait_type": "Feet",
+      "value": "none"
+    },
+    {
+      "trait_type": "Clothes",
+      "value": "legend24"
+    },
+    {
+      "trait_type": "Hands",
+      "value": "blunt"
+    },
+    {
+      "trait_type": "Head",
+      "value": "gold-head"
+    },
+    {
+      "trait_type": "Beak",
+      "value": "orange-beak"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "demon"
+    },
+    {
+      "trait_type": "Hat",
+      "value": "cowboy"
+    }
+  ],
+  "collection": {
+    "name": "Sigh Ducks PX777",
+    "family": "Sigh Ducks"
+  },
+  "properties": {
+    "files": [
+      {
+        "uri": "image.png",
+        "type": "image/png"
+      }
+    ],
+    "category": "image",
+    "creators": [
+      {
+        "address": "TODO1",
+        "share": 5
+      },
+      {
+        "address": "TODO2",
+        "share": 5
+      },
+      {
+        "address": "TODO3",
+        "share": 10
+      },
+      {
+        "address": "TODO4",
+        "share": 80
+      }
+    ]
+  },
+  "isMutable": 1
+}
