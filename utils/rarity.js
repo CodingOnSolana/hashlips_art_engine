@@ -99,8 +99,8 @@ for (var layer in rarityData) {
     rarityData[layer][attribute].occurrencePerc =
       rarityData[layer][attribute].occurrencePerc.toFixed(4) + "% out of 100%";
 
-      rarityData[layer][attribute].rankScore =
-      (rarityData[layer][attribute].occurrence / editionSize) * rarityData[layer].rank;
+      // rarityData[layer][attribute].rankScore =
+      // (rarityData[layer][attribute].occurrence / editionSize) * rarityData[layer].rank;
   }
 }
 
@@ -127,7 +127,7 @@ data.forEach((element) => {
     rarityDataTraits.forEach((rarityDataTrait) => {
       if (rarityDataTrait.trait == value) {
         // keep track of occurrences
-        element.rank += rarityDataTrait.rankScore;
+        //element.rank += rarityDataTrait.rankScore;
       }
     });
   });
@@ -147,14 +147,14 @@ data.sort(function(a, b) {
 
 data.rank
 
-for(let i = 0; i < editionSize; i++) {
-  console.log(data[i].name);
-}
+// for(let i = 0; i < editionSize; i++) {
+//   console.log(data[i].name);
+// }
 
-console.log();
+// console.log();
 
-data.forEach((element) => {
-  if(element.rank < 5) {
-    console.log(element.name)
-  }
-});
+// data.forEach((element) => {
+//   if(element.rank < 5) {
+//     console.log(element.name)
+//   }
+// });
