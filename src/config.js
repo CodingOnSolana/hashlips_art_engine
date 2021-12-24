@@ -5,22 +5,27 @@ const isLocal = typeof process.pkg === "undefined";
 const basePath = isLocal ? process.cwd() : path.dirname(process.execPath);
 const { MODE } = require(path.join(basePath, "src/blendMode.js"));
 const description =
-  "If it looks like a duck and sighs like a duck, that's a real duck! #sighducks";
+  "We should've never swam in that pond.. dook dook.";
 const baseUri = "ipfs://NewUriToReplace";
 
 const layerConfigurations = [
   {
-    growEditionSizeTo: 777,
+    growEditionSizeTo: 3000,
     layersOrder: [
       { name: "Background" },
-      { name: "Body" },
+      { name: "Secret_Treasure" },
+      { name: "Wings" },
       { name: "Feet" },
+      { name: "Footwear" },
+      { name: "Body" },
+      { name: "Ruffle" },
       { name: "Clothes" },
-      { name: "Hands" },
       { name: "Head" },
-      { name: "Beak" },
       { name: "Eyes" },
-      { name: "Hat" }
+      { name: "Eyewear" },
+      { name: "Hats" },
+      { name: "Beak" },
+      { name: "Hand" }
     ],
   },
 ];
@@ -30,8 +35,8 @@ const shuffleLayerConfigurations = false;
 const debugLogs = false;
 
 const format = {
-  width: 400,
-  height: 475,
+  width: 1359,
+  height: 1479,
 };
 
 const background = {

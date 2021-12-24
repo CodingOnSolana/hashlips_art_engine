@@ -20,6 +20,8 @@
   "license": "MIT",
   "dependencies": {
     "canvas": "^2.8.0",
+    "node": "^17.3.0",
+    "nodejs": "^0.0.0",
     "sha1": "^1.1.1"
   }
 }

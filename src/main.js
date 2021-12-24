@@ -31,31 +31,31 @@ var attributesList = [];
 var dnaList = [];
 
 //KJ attrs
-const name = "Sigh Ducks ";
-const gen = "PX777 ";
+const name = "Sigh Ducks Generation 0: Dook ";
+const gen = "";
 const symbol = "SighDucks"; //Required field for metaplex
-const seller_fee_basis_points = 500;
+const seller_fee_basis_points = 1500;
 const isMutable = 1;
-var collection = {name: "Sigh Ducks PX777",
+var collection = {name: "Sigh Ducks Generation 0",
 family: "Sigh Ducks"};
 var properties = {files: [{uri: "image.png", type: "image/png"}], 
 category: "image",
 creators: [
   {
-    address: "TODO1",
-    share: 5
-  },
-  {
-    address: "TODO2",
-    share: 5
-  },
-  {
-    address: "TODO3",
+    address: "MAGIC-EDEN-PLACEHOLDER",
     share: 10
   },
   {
-    address: "TODO4",
-    share: 80
+    address: "Fa99wLU5gxw4AGGrjWpm4Xy7vjuNANxJsR5Q8EKxnVHc",
+    share: 12
+  },
+  {
+    address: "EMnr7f2ziCNBZKkomhssV9s9CETiR23KwzAKumjNULii",
+    share: 15
+  },
+  {
+    address: "B7sjutDWFMjkqSJPCzSSdhFDLtgoMGYtPz1UazcYg7dB",
+    share: 63
   }
 ]};
 
